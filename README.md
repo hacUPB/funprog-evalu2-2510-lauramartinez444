@@ -65,7 +65,7 @@ Arquitectura RISC (Reduced Instruction Set Computing): RISC utiliza un conjunto 
 
 **Registros:**
 
-![alt text](</images/sistema.PNG>)
+![alt text](</images/sistema.png>)
 
 *Caché:* Memoria de alta velocidad utilizada para almacenar datos a los que se accede con frecuencia, lo que acelera el acceso a la información.
 
@@ -103,8 +103,8 @@ Cuando se ingresa un dato a través del teclado, la señal se envía a la CPU, d
 3. https://es.wikipedia.org/wiki/Computadora
 4. https://concepto.de/computadora/
 
-![alt text](</images/sistema-de-medidas.PNG>)
-![alt text](</images/images.PNG>)
+![alt text](</images/sistema-de-medidas.png>)
+![alt text](</images/images.png>)
 
 # Mapa Conceptual 
 
@@ -144,9 +144,9 @@ Cuando se ingresa un dato a través del teclado, la señal se envía a la CPU, d
 *   En Python, el tamaño en bytes de algunos tipos (especialmente `int`, `str`, `list`, `tuple`, `dict`) puede variar significativamente dependiendo de la cantidad de datos almacenados y de la versión de Python que se esté utilizando.
 *   Python gestiona automáticamente la memoria, por lo que no hay una asignación de tamaño fija como en C o Java.
 
-![alt text](</images/pildora-02-captura-2.PNG>)
+![alt text](</images/pildora-02-captura-2.png>)
 
-![alt text](</images/9.PNG>)
+![alt text](</images/9.png>)
 
 # Representación de datos en una computadora:
 
