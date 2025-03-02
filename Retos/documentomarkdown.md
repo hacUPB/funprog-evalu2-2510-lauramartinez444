@@ -9,7 +9,7 @@ Distancia = SQRT(X2-X1)²+(Y2-Y1)²
 Escribir Distancia
 Fin
 
-
+![alt text](../images/1retodrawio.png)
 
 # 2. TELAS 
 Inicio
