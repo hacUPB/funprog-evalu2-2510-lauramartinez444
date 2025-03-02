@@ -205,6 +205,8 @@ Esta actividad me ha demostrado cómo diferentes tipos de datos consumen distint
 
 # Símbolos usados en programación:
 
+![alt text](<images/algoritmo (1).png>)
+
 *   **Línea de flujo:**
 ```
  `-->`  o `→`
@@ -285,3 +287,81 @@ para indicar que es preparación.
 
 ![alt text](</images/simbolos.PNG>)
 
+# ALGORITMOS 📤📥
+
+![alt text](images/algoritmo.png)
+
+# Identificar Algoritmos
+
+❌*Una página web no es un algoritmo, es un medio de presentación de información, pero no necesariamente sigue pasos secuenciales para resolver un problema.*
+
+✅*Una receta para hacer un pastel sí es un algoritmo, ya que presenta instrucciones claras, en orden y con un resultado esperado.*
+
+❌*"Piensa en un número y multiplícalo por otro" no es un algoritmo porque no tiene un conjunto de pasos definidos ni garantiza un resultado único.*
+
+✅*Un manual de instrucciones para armar un mueble sí es un algoritmo, pues describe un proceso detallado y ordenado para lograr un objetivo.*
+
+❌*Una lista de compras organizada en orden alfabético no es un algoritmo, ya que no define una secuencia de pasos ni tiene un objetivo de procesamiento.*
+
+![alt text](images/texto.png)
+
+# Variables y Constantes
+
+🔵 Constante: El valor de la gravedad en la Tierra (9.8 m/s²) no cambia.
+
+🔴 Variable: La edad de una persona cambia cada año.
+
+🔴 Variable: El dinero en una cuenta bancaria varía con los depósitos y retiros.
+
+🔵 Constante: La velocidad de la luz en el vacío es un valor fijo.
+
+🔴 Variable: El radio de un círculo puede cambiar dependiendo del círculo.
+
+![alt text](images/programacion-web.png)
+
+# Características de los Algoritmos
+
+✅ Sí cumple: 
+
+Evalúa distintas rutas y sigue un proceso lógico hasta encontrar la mejor opción.
+
+✅ Sí cumple: 
+
+Indica pasos específicos (sumar y mostrar resultado), lo que define un algoritmo.
+
+✅ Sí cumple: 
+
+Define un conjunto de pasos ordenados y con un objetivo claro.
+
+✅ Sí cumple: 
+
+Tiene una secuencia clara, condiciones de inicio y fin, y logra un propósito específico.
+
+![alt text](images/codigo.png)
+
+# Comprensión de Herramientas
+
+❌ Falso. El pseudocódigo usa una escritura estructurada pero no símbolos gráficos estándar.
+
+✅ Verdadero. Los diagramas de flujo representan un algoritmo gráficamente.
+
+❌ Falso. El pseudocódigo no depende de un lenguaje de programación específico.
+
+✅ Verdadero. Un diagrama de flujo debe tener un punto de inicio y fin para ser válido.
+
+![alt text](images/bombilla.png)
+
+
+#  Estructuras de Control
+
+**Las estructuras de control permiten decidir qué camino tomar en un programa o proceso según una condición.**
+
+**Ejemplo de la vida diaria:**
+
+Si suena la alarma por la mañana, decido levantarme. Si es fin de semana, sigo durmiendo.
+
+**Ejemplo matemático:**
+
+Si un estudiante obtiene una calificación mayor o igual a 60, aprueba la materia; de lo contrario, reprueba.
+
+![alt text](images/algoritmo4.png)
