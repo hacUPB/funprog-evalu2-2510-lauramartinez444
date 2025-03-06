@@ -285,7 +285,7 @@ para indicar que es preparación.
 ```
  (para representar una operación manual)
 
-![alt text](</images/simbolos.PNG>)
+![alt text](</images/simbolos.png>)
 
 # ALGORITMOS 📤📥
 
