@@ -1,26 +1,11 @@
-# Actividad 4: de algoritmo a código fuente
-> Pregunta orientadora:
-> 
-> - ¿Por qué crees que el pseudocódigo es útil antes de escribir un programa en C?
-_Es útil porque nos ayuda a entender el codigo de la forma mas detallada posible y sin tener que pensar en el formato de codigo en un lenguaje en especifico_
-
-> Actividad
-> 
-> - Toma un pseudocódigo de un ejercicio anterior o escribe tu propio pseudocódigo, similar al mostrado en el ejemplo 2.
+# Actividad 4: 
 _INICIO
     Leer valor1
     Leer valor2
     producto = valor1 * valor2
     Mostrar producto
 FIN_
-
-> Pregunta orientadora
-> 
-> - ¿Por qué es importante declarar el tipo de variable (int, float, etc.) antes de usarla en C?
-_A parte de servir para optimizar el codigo, dandole una variable adecuada al tipo de valor que vamos a usar, sirve para consumir la cantidad adecuada de memoria para los valores adecuados._
-
-> Actividad
-> 
+# CALIFICACIONES
 > - Escribe tu propio pseudocódigo para calcular el promedio de una lista de calificaciones y tradúcelo a C.
 
 Inicio 
@@ -63,10 +48,6 @@ int main() {
 
     return 0;
 }
-```
-## > Pregunta orientadora
-> 
-> - ¿Por qué es importante comentar el código, aunque sea breve y conciso? _Indicarle al lector del codigo que hace cada parte del codigo hace que tanto el desarrollador le de a saber al lector que es lo que hace y el lector entiendo que es lo que el codigo hace en cada parte, sea programador o no._
 ## 6. Reto final
 # Distancia entre dos puntos 
 #include <stdio.h>
