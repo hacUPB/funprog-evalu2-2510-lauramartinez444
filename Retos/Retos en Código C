@@ -1,3 +1,73 @@
+# Actividad 4: de algoritmo a código fuente
+> Pregunta orientadora:
+> 
+> - ¿Por qué crees que el pseudocódigo es útil antes de escribir un programa en C?
+_Es útil porque nos ayuda a entender el codigo de la forma mas detallada posible y sin tener que pensar en el formato de codigo en un lenguaje en especifico_
+
+> Actividad
+> 
+> - Toma un pseudocódigo de un ejercicio anterior o escribe tu propio pseudocódigo, similar al mostrado en el ejemplo 2.
+_INICIO
+    Leer valor1
+    Leer valor2
+    producto = valor1 * valor2
+    Mostrar producto
+FIN_
+
+> Pregunta orientadora
+> 
+> - ¿Por qué es importante declarar el tipo de variable (int, float, etc.) antes de usarla en C?
+_A parte de servir para optimizar el codigo, dandole una variable adecuada al tipo de valor que vamos a usar, sirve para consumir la cantidad adecuada de memoria para los valores adecuados._
+
+> Actividad
+> 
+> - Escribe tu propio pseudocódigo para calcular el promedio de una lista de calificaciones y tradúcelo a C.
+
+Inicio 
+- Mostrar mensaje: "Ingrese la cantidad de notas:"
+- Leer cantidad_notas
+- Para i = 1 hasta cantidad_notas, hacer:
+- Mostrar mensaje: "Ingrese la nota ", i
+- Leer nota
+- suma = suma + nota
+- promedio = suma / cantidad_notas
+- Mostrar mensaje: "El promedio es:", promedio
+
+Fin
+
+### Traducción a C
+
+```#include <stdio.h>
+
+int main() {
+    // Declararo las variables que voy a utilizar
+    int cantidad_notas;
+    float suma = 0, promedio, nota;
+
+    // Le pido al usuario la cantidad de notas que quiera ingresar
+    printf("Ingrese la cantidad de notas: ");
+    scanf("%d", &cantidad_notas);
+
+    // Bucle para ingresar las notas una a una
+    for (int i = 1; i <= cantidad_notas; i++) {
+        printf("Ingrese la nota %d: ", i);
+        scanf("%f", &nota);
+        suma = suma + nota; // Acumulo la suma de las notas
+    }
+
+    // formula para el promedio
+    promedio = suma / cantidad_notas;
+
+    // termino mostrando el resultado
+    printf("El promedio de las notas es: %.2f\n", promedio);
+
+    return 0;
+}
+```
+## > Pregunta orientadora
+> 
+> - ¿Por qué es importante comentar el código, aunque sea breve y conciso? _Indicarle al lector del codigo que hace cada parte del codigo hace que tanto el desarrollador le de a saber al lector que es lo que hace y el lector entiendo que es lo que el codigo hace en cada parte, sea programador o no._
+## 6. Reto final
 # Distancia entre dos puntos 
 #include <stdio.h>
 
