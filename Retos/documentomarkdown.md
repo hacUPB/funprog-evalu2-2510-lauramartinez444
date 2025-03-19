@@ -93,28 +93,39 @@
 
 # 6. N CANTIDADES 🦺🦺
     Inicio
-    Definir N, contadorCero, contadorMenorCero, contadorMayorCero como Entero
+    // Definir las variables necesarias
+    Definir N como Entero  // Número total de entradas
+    Definir contadorCero como Entero  // Contador para ceros
+    Definir contadorMenorCero como Entero  // Contador para números menores a cero
+    Definir contadorMayorCero como Entero  // Contador para números mayores a cero
+
+    // Inicializar los contadores en cero
     contadorCero <- 0
     contadorMenorCero <- 0
     contadorMayorCero <- 0
 
+    // Solicitar al usuario la cantidad de números a ingresar
     Escribir "Ingrese la cantidad de números (N):"
     Leer N
 
-    Para i desde 1 hasta N Hacer
+    // Iniciar un ciclo para ingresar N números
+    Para indice desde 1 hasta N Hacer
+        // Definir la variable para almacenar el número ingresado
         Definir numero como Real
-        Escribir "Ingrese el número ", i, ":"
+        Escribir "Ingrese el número ", indice, ":"
         Leer numero
 
+        // Clasificar el número ingresado
         Si numero = 0 Entonces
-            contadorCero <- contadorCero + 1
+            contadorCero <- contadorCero + 1  // Incrementar contador de ceros
         Sino Si numero < 0 Entonces
-            contadorMenorCero <- contadorMenorCero + 1
+            contadorMenorCero <- contadorMenorCero + 1  // Incrementar contador de números menores a cero
         Sino
-            contadorMayorCero <- contadorMayorCero + 1
+            contadorMayorCero <- contadorMayorCero + 1  // Incrementar contador de números mayores a cero
         Fin Si
     Fin Para
 
+    // Mostrar los resultados al usuario
     Escribir "Cantidad de ceros: ", contadorCero
     Escribir "Cantidad de números menores a cero: ", contadorMenorCero
     Escribir "Cantidad de números mayores a cero: ", contadorMayorCero
