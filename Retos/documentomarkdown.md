@@ -30,7 +30,7 @@
     Escribir "Ingrese el cateto adyacente"
     Leer cateto adyacente
 
-    Hipotenusa² = cateto opuesto² + cateto adyacente²
+    Hipotenusa = cateto opuesto² + cateto adyacente²
 
     Hipotenusa = SQRT(Hipotenusa²)  
 
@@ -93,22 +93,31 @@
 
 # 6. N CANTIDADES 🦺🦺
     Inicio
+    Definir N, contadorCero, contadorMenorCero, contadorMayorCero como Entero
+    contadorCero <- 0
+    contadorMenorCero <- 0
+    contadorMayorCero <- 0
 
-    Escribir "Ingrese N cantidades" 
+    Escribir "Ingrese la cantidad de números (N):"
     Leer N
-    Leer Numeros negativos, Ceros, Numeros positivos 
 
-    Si N < 0 Numeros negativos = +1
+    Para i desde 1 hasta N Hacer
+        Definir numero como Real
+        Escribir "Ingrese el número ", i, ":"
+        Leer numero
 
-        Si no 
-        Si N = 0 Ceros = +1 
+        Si numero = 0 Entonces
+            contadorCero <- contadorCero + 1
+        Sino Si numero < 0 Entonces
+            contadorMenorCero <- contadorMenorCero + 1
+        Sino
+            contadorMayorCero <- contadorMayorCero + 1
+        Fin Si
+    Fin Para
 
-            Si no 
-                Si N > 0 Numeros = +1 
-    Fin Si
-        Fin Si 
-            Fin Si
-            Imprimir "Numeros negativos =, Ceros =, Numeros positivos =,"
+    Escribir "Cantidad de ceros: ", contadorCero
+    Escribir "Cantidad de números menores a cero: ", contadorMenorCero
+    Escribir "Cantidad de números mayores a cero: ", contadorMayorCero
     Fin
 
 # 7. AHORRANDO EXPONENCIALMENTE 💷💸💰
@@ -150,42 +159,62 @@
 
 # 9. FUNCIÓN EXPONENCIAL 📕📖✏🖋🖌🖍📈
     Inicio
-    Escribir "Ingrese el valor de x"
+    Escribir "Ingrese el valor de x:"
     Leer x
-    Escribir "Ingrese el número de términos que desea imprimir"
+    Escribir "Ingrese los términos que desea calcular de e^x"
     Leer n 
 
-    e^x = 1
-    término = 1 
-    i = 1 
+    valorExponencial <- 1  // Inicializo el valor de e^x
+    término <- 1           // Inicializo el primer término de la serie
+    fact <- 1              // Inicializo el factorial
+    contador <- 1          // Inicializo el contador de términos
 
-        Mientras i < n hacer: 
-        término = término * x / i 
-        e^x = e^x + termino  
-        i = i + 1  
+    Mientras contador < n Hacer
+        // Calcular el siguiente término de la serie
+        término <- (x ^ contador) / fact  
+        
+        // Sumar el término al valor total de e^x
+        valorExponencial <- valorExponencial + término  
+        
+        // Calcular el factorial para el siguiente término
+        fact <- fact * (contador + 1)  // Actualizamos el factorial para el siguiente término
+        
+        // Incrementar el contador
+        contador <- contador + 1  
+    Fin Mientras 
 
-        Fin Mientras 
-
-    Imprimir "El valor aproximado de e^x es:", e^x
-
+    Escribir "El valor aproximado de e^x es:", valorExponencial
     Fin
 
 # 10. FUNCIÓN SENO 🧩⚙🗃📇📚
     Inicio
-    Escribir "Ingrese el valor de x en radianes"
-    Leer x 
-    Escribir "Ingrese el número de términos que desea imprimir"
+    Escribir "Ingrese el valor de x en grados:"
+    Leer xGrados
+    
+    xRadianes = xGrados * (π / 180)
+
+    Escribir "Ingrese el número de términos que desea imprimir para calcular sen_x"
     Leer n
 
-    Sen(x) = x  
-    termino = x  
-    i = 1  
+    valorSeno <- xRadianes  // Inicializo el valor de sen(x) con el primer término
+    término <- xRadianes     // Inicializo el primer término de la serie
+    fact <- 1                // Inicializo el factorial
+    contador <- 1            // Inicializo el contador de términos
+    signo <- -1              // Inicializo el signo para el siguiente término
 
-         Mientras i < n hacer
-        termino = termino * (-1) * x * x / ((2 * i) * (2 * i + 1))  
-        Sen(x) = Sen(x) + termino  
-        i = i + 1  
-        Fin Mientras
+    Mientras contador < n Hacer  // Usamos n términos para la aproximación
+        // Calcular el siguiente término de la serie
+        término <- término * (xRadianes ^ 2) / ((2 * contador) * (2 * contador + 1))  
+        
+        // Sumar el término al valor total de sen_x
+        valorSeno <- valorSeno + (signo * término)  
+        
+        // Cambiar el signo para el siguiente término
+        signo <- -signo  
+        
+        // Incrementar el contador
+        contador <- contador + 1  
+    Fin Mientras 
 
-        Imprimir "El valor aproximado de Sen(x) es: ", Sen(x)
-    Fin 
+    Escribir "El valor aproximado de sen_x es:", valorSeno
+    Fin
