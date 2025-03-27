@@ -41,28 +41,28 @@
 
 # 4. ¡CUMPLEAÑOS! 🎊🎉🍰🥧
     Inicio
-    Escribir "Ingrese su fecha de nacimiento dn/mn/an"
+    Escribir "Ingrese su fecha de nacimiento dn/mn/an:"
     Leer dn, mn, an
     Leer da, ma, aa
 
-    Sí dn > da y mn > ma entonces 
-    Edad = aa-an
-
-        Si no
-        Sí dn < da y mn < ma entonces 
-        Edad = (aa-an)-1 
-    
-
-            Si no
-            Si dn = da y mn = ma entonces 
-            Edad = aa-an   
-            Escribir "Feliz Cumpleaños 🎉🎊"
-            Fin Si
-    Fin Si 
+    Si mn < ma 
+    Edad = aa - an 
+        
+        Sino Si mn = ma Entonces
+        
+        Si dn < da 
+            Sino Si dn = da Entonces
+            Escribir "¡Feliz Cumpleaños 🎉🎊!"
+        Sino
+            Edad = (aa - an) - 1
         Fin Si
+    Sino
+        Edad = (aa - an) - 1
+    Fin Si
 
-    Imprimir Edad 
+    Escribir "Su edad es: ", Edad
     Fin
+
 
 # 5. SUELDO DE UN TRABAJADOR 👷‍♂️👷‍♀️👷‍♂️👷‍♀️
     Inicio
