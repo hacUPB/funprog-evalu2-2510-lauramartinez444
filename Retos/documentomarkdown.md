@@ -37,7 +37,7 @@
     Imprimir Hipotenusa
     Fin
 
-![alt text](<../images/3.retodrawio.png>)
+![alt text](<../images/3.retodrawio.PNG>)
 
 # 4. ¡CUMPLEAÑOS! 🎊🎉🍰🥧
     Inicio
