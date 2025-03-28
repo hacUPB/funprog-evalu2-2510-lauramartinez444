@@ -49,10 +49,11 @@
     Edad = aa - an 
         
         Sino Si mn = ma Entonces
-        
-        Si dn < da 
-            Sino Si dn = da Entonces
-            Escribir "¡Feliz Cumpleaños 🎉🎊!"
+            Si dn < da 
+            Edad = aa - an
+                Sino Si dn = da Entonces
+                Escribir "¡Feliz Cumpleaños 🎉🎊!"
+                Edad = aa - an
         Sino
             Edad = (aa - an) - 1
         Fin Si
@@ -103,6 +104,7 @@
     contadorCero <- 0
     contadorMenorCero <- 0
     contadorMayorCero <- 0
+    contadorpares = 0
 
     // Solicitar al usuario la cantidad de números a ingresar
     Escribir "Ingrese la cantidad de números (N):"
@@ -122,6 +124,8 @@
             contadorMenorCero <- contadorMenorCero + 1  // Incrementar contador de números menores a cero
         Sino
             contadorMayorCero <- contadorMayorCero + 1  // Incrementar contador de números mayores a cero
+        Si numero N%2 (residuo N, 2) = 0
+            contadorpares = contadorpares +1
         Fin Si
     Fin Para
 
@@ -129,6 +133,7 @@
     Escribir "Cantidad de ceros: ", contadorCero
     Escribir "Cantidad de números menores a cero: ", contadorMenorCero
     Escribir "Cantidad de números mayores a cero: ", contadorMayorCero
+    Escribir "Cantidad de número pares:", contadorpares
     Fin
 
 # 7. AHORRANDO EXPONENCIALMENTE 💷💸💰
@@ -175,14 +180,14 @@
     Escribir "Ingrese los términos que desea calcular de e^x"
     Leer n 
 
-    valorExponencial <- 1  // Inicializo el valor de e^x
-    término <- 1           // Inicializo el primer término de la serie
-    fact <- 1              // Inicializo el factorial
-    contador <- 1          // Inicializo el contador de términos
+    valorExponencial = 1  // Inicializo el valor de e^x
+    término = 1           // Inicializo el primer término de la serie
+    fact = 1              // Inicializo el factorial
+    contador = 1          // Inicializo el contador de términos
 
     Mientras contador < n Hacer
         // Calcular el siguiente término de la serie
-        término <- (x ^ contador) / fact  
+        término <- (x ^ contador) / fact 
         
         // Sumar el término al valor total de e^x
         valorExponencial <- valorExponencial + término  
@@ -215,7 +220,7 @@
 
     Mientras contador < n Hacer  // Usamos n términos para la aproximación
         // Calcular el siguiente término de la serie
-        término <- término * (xRadianes ^ 2) / ((2 * contador) * (2 * contador + 1))  
+        término <- término * (xRadianes ^ 2) / fac (2 * contador + 1))  
         
         // Sumar el término al valor total de sen_x
         valorSeno <- valorSeno + (signo * término)  
