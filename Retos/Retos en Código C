@@ -1,0 +1,283 @@
+# Actividad 4: 
+_INICIO
+    Leer valor1
+    Leer valor2
+    producto = valor1 * valor2
+    Mostrar producto
+FIN_
+# CALIFICACIONES
+> - Escribe tu propio pseudocódigo para calcular el promedio de una lista de calificaciones y tradúcelo a C.
+
+Inicio 
+- Mostrar mensaje: "Ingrese la cantidad de notas:"
+- Leer cantidad_notas
+- Para i = 1 hasta cantidad_notas, hacer:
+- Mostrar mensaje: "Ingrese la nota ", i
+- Leer nota
+- suma = suma + nota
+- promedio = suma / cantidad_notas
+- Mostrar mensaje: "El promedio es:", promedio
+
+Fin
+
+### Traducción a C
+
+```#include <stdio.h>
+
+int main() {
+    // Declararo las variables que voy a utilizar
+    int cantidad_notas;
+    float suma = 0, promedio, nota;
+
+    // Le pido al usuario la cantidad de notas que quiera ingresar
+    printf("Ingrese la cantidad de notas: ");
+    scanf("%d", &cantidad_notas);
+
+    // Bucle para ingresar las notas una a una
+    for (int i = 1; i <= cantidad_notas; i++) {
+        printf("Ingrese la nota %d: ", i);
+        scanf("%f", &nota);
+        suma = suma + nota; // Acumulo la suma de las notas
+    }
+
+    // formula para el promedio
+    promedio = suma / cantidad_notas;
+
+    // termino mostrando el resultado
+    printf("El promedio de las notas es: %.2f\n", promedio);
+
+    return 0;
+}
+## 6. Reto final
+# Distancia entre dos puntos 
+#include <stdio.h>
+
+int main() {
+    float valor1, valor2, valor3, valor4, Distancia;
+
+    printf("Ingrese las coordenadas (x1, y1) del primer punto: ");
+    scanf("%x1, y1", &valor1, &valor2);
+
+    printf("Ingrese las coordenadas (x2, y2) del segundo punto: ");
+    scanf("%x2, y2", &valor3, valor4);
+
+    Distancia = SQRT(X2-X1)²+(Y2-Y1)²;
+    printf("La Distancia es: %.2f\n", Distancia);
+
+    return 0;
+}
+# Telas 
+#include <stdio.h>
+
+int main() {
+    float cantidad, pulgadas;
+
+    printf("Ingrese la cantidad de metros que desea pedir: ");
+    scanf("%f", &cantidad);
+
+    pulgadas = cantidad * 39.37;
+
+    printf("Pulgadas: %.2f\n", pulgadas);
+
+    return 0;
+}
+# Triangulo Rectangulo 
+#include <stdio.h>
+#include <math.h> // Necesario para usar la función sqrt
+
+int main() {
+    float cateto_opuesto, cateto_adyacente, hipotenusa_cuadrada, hipotenusa;
+
+    printf("Ingrese el cateto opuesto: ");
+    scanf("%f", &cateto_opuesto);
+
+    printf("Ingrese el cateto adyacente: ");
+    scanf("%f", &cateto_adyacente);
+
+    hipotenusa_cuadrada = (cateto_opuesto * cateto_opuesto) + (cateto_adyacente * cateto_adyacente);
+    hipotenusa = sqrt(hipotenusa_cuadrada); // Calcula la hipotenusa
+
+    printf("Hipotenusa: %.2f\n", hipotenusa);
+
+    return 0;
+}
+# ¡Cumpleaños!
+#include <stdio.h>
+
+int main() {
+    int dn, mn, an; // Día, mes y año de nacimiento
+    int da, ma, aa; // Día, mes y año actual
+    int edad;
+
+    printf("Ingrese su fecha de nacimiento (dn/mn/an): ");
+    scanf("%d/%d/%d", &dn, &mn, &an);
+
+    printf("Ingrese la fecha actual (da/ma/aa): ");
+    scanf("%d/%d/%d", &da, &ma, &aa);
+
+    if (dn > da && mn > ma) {
+        edad = aa - an;
+    } else if (dn < da && mn < ma) {
+        edad = (aa - an) - 1;
+    } else if (dn == da && mn == ma) {
+        edad = aa - an;
+        printf("Feliz Cumpleaños 🎉🎊\n");
+    } else {
+  
+        if ((mn < ma) || (mn == ma && dn < da)) {
+            edad = aa - an;
+        } else {
+            edad = (aa - an) - 1;
+        }
+    }
+
+    printf("Edad: %d\n", edad);
+
+    return 0;
+}
+# Sueldo de un trabajador 
+#include <stdio.h>
+
+int main() {
+    float vh; // Sueldo por hora
+    float ht; // Horas trabajadas
+    float vt; // Sueldo total
+
+    printf("Ingrese el sueldo por hora del trabajador: ");
+    scanf("%f", &vh);
+
+    printf("Ingrese horas trabajadas: ");
+    scanf("%f", &ht);
+
+    if (ht > 50) {
+        printf("Valor no permitido, 50 es el máximo de horas.\n");
+    } else {
+        if (ht < 40) {
+            vt = ht * vh;
+        } else if (ht >= 40 && ht < 45) {
+            vt = (40 * vh) + ((ht - 40) * 2);
+        } else if (ht >= 45 && ht <= 50) {
+            vt = (40 * vh) + (5 * 2) + ((ht - 45) * 3);
+        }
+
+        printf("El sueldo total es igual a: %.2f\n", vt);
+    }
+
+    return 0;
+}
+# N Cantidades 
+#include <stdio.h>
+
+int main() {
+    int N; // Variable para almacenar la cantidad ingresada
+    int numeros_negativos = 0; // Contador de números negativos
+    int ceros = 0; // Contador de ceros
+    int numeros_positivos = 0; // Contador de números positivos
+
+    printf("Ingrese N cantidades (ingrese un número negativo para terminar): \n");
+
+    while (1) { // Bucle infinito para leer números hasta que se ingrese un negativo
+        scanf("%d", &N);
+
+        if (N < 0) {
+            numeros_negativos += 1; // Incrementar contador de negativos
+            break; // Salir del bucle si se ingresa un número negativo
+        } else if (N == 0) {
+            ceros += 1; // Incrementar contador de ceros
+        } else {
+            numeros_positivos += 1; // Incrementar contador de positivos
+        }
+    }
+
+    printf("Números negativos = %d, Ceros = %d, Números positivos = %d\n", numeros_negativos, ceros, numeros_positivos);
+
+    return 0;
+}
+# Ahorrando exponencialmente
+#include <stdio.h>
+
+int main() {
+    float ahorro_diario = 0.03; // Ahorro diario inicial
+    float ahorro_total = 0; // Ahorro total acumulado
+
+    for (int dia = 1; dia <= 365; dia++) { // Desde día 1 hasta día 365
+        ahorro_total += ahorro_diario; // Acumular el ahorro total
+        ahorro_diario *= 3; // Triplicar el ahorro diario
+    }
+
+    printf("Ahorro total en un año: %.2f pesos\n", ahorro_total); // Imprimir el ahorro total
+
+    return 0;
+}
+# Descuento en N artículos 
+#include <stdio.h>
+
+int main() {
+    float precio; // Precio de los artículos
+    float precio_total; // Precio total después de aplicar descuentos
+
+    printf("Ingrese el precio de los artículos comprados: ");
+    scanf("%f", &precio);
+
+    if (precio >= 200) {
+        precio_total = precio - (precio * 0.15); // Descuento del 15%
+    } else if (precio > 100 && precio < 200) {
+        precio_total = precio - (precio * 0.12); // Descuento del 12%
+    } else { // precio <= 100
+        precio_total = precio - (precio * 0.10); // Descuento del 10%
+    }
+
+    printf("Tu precio total es: %.2f\n", precio_total); // Imprimir el precio total
+
+    return 0;
+}
+# Función exponencial 
+#include <stdio.h>
+
+int main() {
+    float x; // Valor de x
+    int n; // Número de términos
+    float e_x = 1.0; // Inicializar e^x
+    float termino = 1.0; // Primer término de la serie
+    int i = 1; // Contador para los términos
+
+    printf("Ingrese el valor de x: ");
+    scanf("%f", &x);
+    printf("Ingrese el número de términos que desea imprimir: ");
+    scanf("%d", &n);
+
+    while (i < n) {
+        termino = termino * x / i; // Calcular el siguiente término
+        e_x = e_x + termino; // Sumar el término a e^x
+        i++; // Incrementar el contador
+    }
+
+    printf("El valor aproximado de e^x es: %.6f\n", e_x); // Imprimir el resultado
+
+    return 0;
+}
+# Función seno
+#include <stdio.h>
+
+int main() {
+    float x; // Valor de x en radianes
+    int n; // Número de términos
+    float sen_x = x; // Inicializar Sen(x) con el primer término
+    float termino = x; // Primer término de la serie
+    int i = 1; // Contador para los términos
+
+    printf("Ingrese el valor de x en radianes: ");
+    scanf("%f", &x);
+    printf("Ingrese el número de términos que desea imprimir: ");
+    scanf("%d", &n);
+
+    while (i < n) {
+        termino = termino * (-1) * x * x / ((2 * i) * (2 * i + 1)); // Calcular el siguiente término
+        sen_x = sen_x + termino; // Sumar el término a Sen(x)
+        i++; // Incrementar el contador
+    }
+
+    printf("El valor aproximado de Sen(x) es: %.6f\n", sen_x); // Imprimir el resultado
+
+    return 0;
+}
