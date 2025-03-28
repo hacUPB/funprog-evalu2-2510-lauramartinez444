@@ -108,7 +108,7 @@
     Escribir "Ingrese la cantidad de números (N):"
     Leer N
 
-    // Iniciar un ciclo para ingresar N números
+    // Inicio bucle para ingresar N números
     Para indice desde 1 hasta N Hacer
         // Definir la variable para almacenar el número ingresado
         Definir numero como Real
